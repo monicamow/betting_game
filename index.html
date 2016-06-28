@@ -6,12 +6,20 @@
 
   <link rel="stylesheet" type="text/css" href="./public/stylesheets/application.css">
 
-  <script src="./public/javascripts/application.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+  <script src="./public/javascripts/application.js"></script> -->
 
 </head>
 <body>
   <h1>Welcome to The Betting Game</h1>
-  <div id="bankroll"></div>
-  <div id="new-bankroll"></div>
+  <form id="player-input">
+    <label for="player-bet">Place your bet:</label><br>
+    <input type="radio" name="player-bet" value="5">$5<br>
+    <input type="radio" name="player-bet" value="5">$10<br>
+    <label for="player-guess">Guess a number between 1 and 10:</label><br>
+    <input type="text" id="player-guess">    
+    <input type="submit">
+  </form>
 </body>
 </html>
