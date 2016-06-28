@@ -1,30 +1,37 @@
 var app = function(event) {
+  
   var playerBankroll = 100;
   document.getElementById("bankroll").innerHTML = "Your initial bankroll is " + "$" + playerBankroll + ".";
 
-  var playerBet = prompt("Place a $5 or $10 bet: ");
+  while (playerBankroll > 0) {
+    var playerBet = prompt("Place a $5 or $10 bet: ");
 
-  var playerGuess = prompt("Guess a number between 1 and 10: ");
+    var playerGuess = prompt("Guess a number between 1 and 10: ");
 
-  var gameNumber = Math.floor((Math.random() * 10) + 1);
+    var gameNumber = Math.floor((Math.random() * 10) + 1);
+    console.log(playerGuess, gameNumber);
 
-  switch (validateGuess(playerGuess, gameNumber)) {
-    case 0:
-      alert("Good guess!");
-      playerBankroll += playerBet;
+    if (!playerBet || !gameNumber) {
       break;
+    }
 
-    case 1:
-      alert("Close but no cigar.");
-      break;
+    switch (validateGuess(playerGuess, gameNumber)) {
+      case 0:
+        alert("Good guess!");
+        playerBankroll += playerBet;
+        break;
 
-    default:
-      alert("PLAY AGAIN");
-      playerBankroll -= playerBet;
+      case 1:
+        alert("Close but no cigar.");
+        break;
+
+      default:
+        alert("PLAY AGAIN");
+        playerBankroll -= playerBet;
+    }
+
+    document.getElementById("new-bankroll").innerHTML = "You now have " + "$" + playerBankroll + ".";
   }
-
-  document.getElementById("new-bankroll").innerHTML = "You now have " + "$" + playerBankroll + ".";
-
   // if (gameNumber === playerGuess) {
   //   var validateGuess = "Good guess!";
   //   alert(validateGuess);
