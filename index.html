@@ -13,15 +13,29 @@
 </head>
 <body>
   <h1>Welcome to The Betting Game</h1>
-  <form id="player-input">
-    <label for="player-bet">Place your bet:</label><br>
-    <input type="radio" name="player-bet" value="5">$5<br>
-    <input type="radio" name="player-bet" value="10">$10<br>
-    <label for="player-guess">Guess a number between 1 and 10:</label><br>
-    <input type="text" id="player-guess">    
-    <input type="submit">
-  </form>
-  <span id="bet"></span><br>
-  <span id="guess"></span>
+  <p>
+    <form id="player-input">
+      <label for="player-bet">Place your bet:</label><br>
+      <input type="radio" name="player-bet" value="5">$5<br>
+      <input type="radio" name="player-bet" value="10">$10<br>
+      <label for="player-guess">Guess a number between 1 and 10:</label><br>
+      <input type="text" id="player-guess">    
+      <input type="submit">
+    </form>
+  </p>
+  <p>
+    <div id="bet"></div><br>
+    <div id="guess"></div><br>
+    <div id="game-number"></div>
+  </p>
+  <p>
+    <div id="result"></div>
+  </p>
+  <p>
+    <div id="player-bankroll"></div>
+  </p>
+  <p>
+    <div id="game-over"></div>
+  </p>  
 </body>
 </html>
