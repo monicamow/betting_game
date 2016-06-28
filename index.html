@@ -6,9 +6,9 @@
 
   <link rel="stylesheet" type="text/css" href="./public/stylesheets/application.css">
 
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-  <script src="./public/javascripts/application.js"></script> -->
+  <script src="./public/javascripts/application.js"></script>
 
 </head>
 <body>
@@ -16,10 +16,12 @@
   <form id="player-input">
     <label for="player-bet">Place your bet:</label><br>
     <input type="radio" name="player-bet" value="5">$5<br>
-    <input type="radio" name="player-bet" value="5">$10<br>
+    <input type="radio" name="player-bet" value="10">$10<br>
     <label for="player-guess">Guess a number between 1 and 10:</label><br>
     <input type="text" id="player-guess">    
     <input type="submit">
   </form>
+  <span id="bet"></span><br>
+  <span id="guess"></span>
 </body>
 </html>
